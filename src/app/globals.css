@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* === Paratrack Design Tokens === */
+  --color-primary: #2a4848;
+  --color-secondary: #4a6e6e;
+  --color-accent: #d8e8e8;
+  --color-border: #b0c8c8;
+
+  --color-text-primary: #1a3030;
+  --color-text-secondary: #2a4848;
+  --color-text-muted: #6a8888;
+
+  --color-success: #3a5858;
+  --color-warning: #D97706;
+  --color-error: #DC2626;
+
+  /* Kid palette — kept vibrant for per-child coding */
+  --color-kid-coral: #C96A4B;
+  --color-kid-lavender: #8A7BA7;
+  --color-kid-sky: #5B9BD5;
+  --color-kid-mint: #508D76;
+  --color-kid-amber: #D97706;
+
+  /* Typography */
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  /* shadcn compat */
+  --color-background: #d8e8e8;
+  --color-foreground: #1a3030;
+  --color-card: #c8d8d8;
+  --color-card-foreground: #1a3030;
+  --color-popover: #c8d8d8;
+  --color-popover-foreground: #1a3030;
+  --color-muted: #b0c8c8;
+  --color-muted-foreground: #6a8888;
+  --color-destructive: #DC2626;
+  --color-ring: #2a4848;
+  --color-input: #b0c8c8;
+
+  /* Typography */
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  /* shadcn compat */
+  --color-background: #FDFBF7;
+  --color-foreground: #1C1A17;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #1C1A17;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #1C1A17;
+  --color-muted: #F5F1EB;
+  --color-muted-foreground: #57534E;
+  --color-destructive: #DC2626;
+  --color-ring: #C96A4B;
+  --color-input: #EDE9DF;
+
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-pill: 9999px;
+  --radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100svh;
+  }
+  html {
+    @apply font-sans;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+  }
+}
